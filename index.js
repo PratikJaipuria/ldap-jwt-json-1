@@ -7,13 +7,13 @@ var LdapAuth = require('ldapauth-fork');
 var Promise  = require('promise');
 var ldapjs = require('ldapjs')
 app = require('express')();
-
+var express = require('express');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(require('cors')());
 
 
-
+app.use(express.static(__dirname + '/public'));
 //CREATE USER
 // const ldapClient = ldapjs.createClient(ldapOptions);
 
